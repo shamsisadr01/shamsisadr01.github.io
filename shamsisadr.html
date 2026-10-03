@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شهریار شمسی صدر — رزومه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="screen">
+<style>
+  :root{
+    --ink:#111827; --soft:#374151; --muted:#4b5563;
+    --line:#d8dee6; --accent:#1f4e79; --paper:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Vazirmatn',Tahoma,sans-serif;
+    background:#eceff2; color:var(--ink);
+    font-size:10.5pt; line-height:1.85;
+    padding:22px 12px;
+  }
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;}
+  .sheet{
+    width:210mm; min-height:297mm; margin:0 auto; background:var(--paper);
+    padding:14mm 15mm 12mm; box-shadow:0 8px 28px rgba(15,23,42,.14);
+  }
+
+  /* ---------- سربرگ ---------- */
+  header{border-bottom:2px solid var(--accent);padding-bottom:10px;}
+  h1{font-size:21pt;font-weight:800;letter-spacing:0;color:#0f172a;line-height:1.4;}
+  .role{font-size:11.5pt;font-weight:600;color:var(--accent);margin-top:2px;}
+  .contact{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:9.5pt;color:var(--muted);margin-top:9px;}
+  .contact a{color:var(--muted);text-decoration:none;}
+
+  /* ---------- سرفصل‌ها ---------- */
+  section{margin-top:15px;}
+  h2{
+    display:flex;align-items:center;gap:8px;
+    font-size:12.5pt;font-weight:700;color:var(--accent);margin-bottom:8px;
+  }
+  h2::before{content:"";width:7px;height:7px;background:var(--accent);border-radius:1px;flex:0 0 auto;}
+  h2::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  .summary{text-align:justify;color:var(--soft);}
+
+  /* ---------- ردیف مهارت ---------- */
+  .row{display:flex;gap:10px;padding:5px 0;border-bottom:1px dotted var(--line);}
+  .row:last-child{border-bottom:none;}
+  .row .k{flex:0 0 120px;font-weight:700;font-size:10pt;}
+  .row .v{flex:1;color:var(--soft);}
+  .row .v b{color:var(--ink);font-weight:600;}
+
+  /* ---------- سوابق شغلی ---------- */
+  .job{margin-bottom:13px;break-inside:avoid;}
+  .job-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+  .job-top .co{font-weight:700;font-size:11pt;color:#0f172a;}
+  .job-top .pos{font-size:10pt;color:var(--soft);font-weight:500;}
+  .job-top .date{font-size:9.5pt;color:var(--muted);white-space:nowrap;}
+  .job-sub{font-size:9.5pt;color:var(--muted);margin-bottom:4px;}
+  ul{margin:5px 15px 0 0;padding:0;}
+  li{margin-bottom:3px;text-align:justify;color:var(--soft);}
+  li::marker{color:var(--accent);}
+
+  /* ---------- پروژه‌ها ---------- */
+  .proj{padding:7px 0;border-bottom:1px dotted var(--line);break-inside:avoid;}
+  .proj:last-child{border-bottom:none;}
+  .proj .name{font-weight:700;font-size:10.5pt;color:#0f172a;line-height:1.6;}
+  .proj .name a{color:#1f4e79;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .proj .name a:hover{color:#173a5a;text-decoration-thickness:2px;}
+  .proj .body{color:var(--soft);margin-top:2px;}
+  .proj .body .tech{color:var(--muted);font-size:9pt;margin-top:2px;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;}
+  .meta{font-size:9.5pt;color:var(--muted);}
+
+  /* ---------- چاپ ---------- */
+  .print-btn{
+    position:fixed;inset-inline-start:22px;bottom:22px;z-index:5;
+    font-family:inherit;font-size:9.5pt;font-weight:600;cursor:pointer;
+    background:var(--accent);color:#fff;border:none;border-radius:6px;padding:10px 18px;
+    box-shadow:0 6px 18px rgba(15,23,42,.28);
+  }
+  @page{size:A4;margin:10mm;}
+  /* چاپ با فونت نصب‌شده‌ی سیستم: فونت وب باعث می‌شود مرورگر متن فارسی را
+     به گلیف‌های برداری (Type3) تبدیل کند و در PDF قابل انتخاب/جست‌وجو نباشد. */
+  @media print{
+    /* در چاپ متن عادی کامل‌سیاه نمی‌شود؛ با رنگ نزدیک به مشکی پررنگ‌تر از وب چاپ می‌شود */
+    body,.summary,.v,li,.proj .body{color:#161e29;}
+    .job-top .date,.job-sub,.meta,.proj .tech,.contact{color:#39434f;}
+    /* مقیاس ثابت چاپ با Vazirmatn نصب‌شده‌ی سیستمی (هم‌فونت با وب؛ از Google Fonts لود نمی‌شود
+       تا متن به Type3 تبدیل نشود). وزن‌های بولد واقعی دارد و بولد مصنوعی نمی‌سازد. */
+    body{background:#fff;padding:0;
+         font-size:10.5pt;line-height:1.5;
+         font-family:'Vazirmatn',Tahoma,sans-serif !important;}
+    /* فونت وب گوگل‌فونتس فقط برای صفحه است؛ در چاپ فونت سیستمی جایش را می‌گیرد */
+    @font-face{font-family:'Vazirmatn';src:local('Vazirmatn');}
+    @font-face{font-family:'Vazirmatn';src:local('Vazirmatn Bold');font-weight:700;}
+    @font-face{font-family:'Vazirmatn';src:local('Vazirmatn ExtraBold');font-weight:800;}
+    @font-face{font-family:'Vazirmatn';src:local('Vazirmatn Medium');font-weight:500;}
+    @font-face{font-family:'Vazirmatn';src:local('Vazirmatn SemiBold');font-weight:600;}
+    h1{font-size:17pt;font-weight:800;line-height:1.3;}
+    .role{font-size:11.5pt;font-weight:600;}
+    h2{font-size:11.5pt;font-weight:700;margin-bottom:3px;break-after:avoid;}
+    p,li{orphans:2;widows:2;}
+    .contact{font-size:9.5pt;margin-top:3px;gap:3px 14px;}
+    header{padding-bottom:5px;}
+    section{margin-top:6px;}
+    /* سلکتورها هم‌قدِ صفحه باشند تا سایز صفحه بر چاپ غلبه نکند */
+    .summary,.v,.job-top .co,.job-top .pos,.proj .name{font-size:10.5pt;}
+    .job-top .co{font-weight:700;}
+    .row .k{font-size:10.5pt;flex:0 0 34mm;}
+    .job{margin-bottom:6px;}
+    .job-top .date,.job-sub,.meta,.proj .body .tech{font-size:9.5pt;}
+    .proj{padding:3px 0;}
+    .proj .name{font-weight:700;}
+    .proj .name a{color:#1f4e79;text-decoration:underline;}
+    .proj .body{margin-top:1px;}
+    ul{margin:2px 15px 0 0;}
+    li{margin-bottom:1px;}
+    .two-col{gap:0 20px;}
+    .ltr{font-family:Calibri,'Segoe UI',Tahoma,sans-serif;}
+    .summary,li,.proj .body{text-align:right;}
+    .job,.proj,.row{break-inside:avoid;}
+    .sheet{width:auto;min-height:0;box-shadow:none;padding:0;}
+    .print-btn{display:none;}
+  }
+  @media (max-width:820px){
+    .sheet{width:auto;padding:18px 16px;min-height:0;}
+    .row{flex-direction:column;gap:2px;}
+    .row .k{flex:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ======== سربرگ ======== -->
+  <header>
+    <h1>شهریار شمسی صدر</h1>
+    <div class="role">توسعه‌دهنده بک‌اند <span class="ltr">.NET</span></div>
+    <div class="contact">
+      <span>تهران</span>
+      <span class="ltr">+98 921 690 3628</span>
+      <a class="ltr" href="mailto:shamsisadr01@gmail.com">shamsisadr01@gmail.com</a>
+    </div>
+  </header>
+
+  <!-- ======== خلاصه ======== -->
+  <section>
+    <h2>خلاصه‌ی حرفه‌ای</h2>
+    <p class="summary">
+      توسعه‌دهنده بک‌اند با سه سال تجربه‌ی ساخت سامانه‌های سازمانی در سه شرکت فناوری.
+      تخصص اصلی‌ام طراحی سرویس‌های مقیاس‌پذیر با <span class="ltr">ASP.NET Core</span> و <span class="ltr">SQL Server</span> بر پایه‌ی معماری تمیز،
+      <span class="ltr">DDD</span> و <span class="ltr">CQRS</span> است. در این مسیر، مونولیت‌های پیچیده را به ماژول‌های مستقل شکسته‌ام،
+      زمان پاسخ کوئری‌های پرترافیک را کوتاه کرده‌ام و فرهنگ تست خودکار (واحد، یکپارچگی، پذیرش) و <span class="ltr">Code Review</span> را در تیم تثبیت کرده‌ام.
+    </p>
+  </section>
+
+  <!-- ======== مهارت‌ها ======== -->
+  <section>
+    <h2>مهارت‌های فنی</h2>
+
+    <div class="row">
+      <div class="k">زبان و فریم‌ورک</div>
+      <div class="v ltr" style="text-align:left">C#, .NET 8 / 9 / 10, ASP.NET Core (MVC, Minimal API), EF Core, LINQ, gRPC, JavaScript, HTML, CSS, Familiar with Angular &amp; React</div>
+    </div>
+    <div class="row">
+      <div class="k">داده و کش</div>
+      <div class="v ltr" style="text-align:left">SQL Server / T-SQL, PostgreSQL, MongoDB, Marten, SQLite, Redis</div>
+    </div>
+    <div class="row">
+      <div class="k">معماری و طراحی</div>
+      <div class="v ltr" style="text-align:left">Clean Architecture, SOLID, DDD, CQRS / MediatR, Vertical Slice, Modular Monolith, Microservices, GoF Patterns</div>
+    </div>
+    <div class="row">
+      <div class="k">تست و کیفیت</div>
+      <div class="v ltr" style="text-align:left">xUnit, Moq, Shouldly, Respawn, FluentValidation, Swagger / OpenAPI, Scalar</div>
+    </div>
+    <div class="row">
+      <div class="k">ابزار و زیرساخت</div>
+      <div class="v ltr" style="text-align:left">Git / GitHub / GitLab, Docker, .NET Aspire, YARP / Ocelot (API Gateway), RabbitMQ / MassTransit, Serilog &amp; Seq, Keycloak (OIDC), Camunda Workflow, Jira</div>
+    </div>
+  </section>
+
+  <!-- ======== سوابق شغلی ======== -->
+  <section>
+    <h2>سوابق شغلی</h2>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">مُتَمَایِز</span>
+          <span class="pos">| برنامه‌نویس بک‌اند <span class="ltr">(.NET)</span></span>
+        </div>
+        <div class="date">دی ۱۴۰۴ تاکنون · ۹ ماه</div>
+      </div>
+      <ul>
+        <li>مالکیت سرتاسری سرویس‌های بک‌اند؛ از مدل‌سازی داده و لایه‌ی دسترسی (<span class="ltr">EF Core / SQL Server</span>) تا طراحی <span class="ltr">API</span> و انتشار.</li>
+        <li>تحلیل نیازمندی‌های کسب‌وکار، ارائه‌ی راهکار فنی و پیاده‌سازی با <span class="ltr">ASP.NET Core</span> بر پایه‌ی اصول <span class="ltr">SOLID</span>.</li>
+        <li>بهینه‌سازی کوئری‌های کند و الگوهای دسترسی به داده؛ کاهش زمان پاسخ <span class="ltr">endpoint</span>های پرترافیک.</li>
+        <li>طراحی و پیاده‌سازی فرایندهای کسب‌وکار با موتور ورک‌فلو <span class="ltr">Camunda</span> و یکپارچه‌سازی آن با سرویس‌های بک‌اند.</li>
+        <li>راهبری <span class="ltr">Code Review</span>، تعریف استاندارد کدنویسی و هدایت تیم در پیاده‌سازی الگوهای طراحی.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">کارنو</span>
+          <span class="pos">| برنامه‌نویس بک‌اند <span class="ltr">(.NET)</span></span>
+        </div>
+        <div class="date">اسفند ۱۴۰۳ تا آذر ۱۴۰۴ · ۱۰ ماه</div>
+      </div>
+      <ul>
+        <li>طراحی و توسعه‌ی ماژول‌های کلیدی با معماری چندلایه و الگوهای <span class="ltr">Repository</span> و <span class="ltr">Unit of Work</span>.</li>
+        <li>بازطراحی ساختار داده و رفع گلوگاه‌های کارایی (<span class="ltr">Indexing</span>، حذف مسئله‌ی <span class="ltr">N+1</span>)؛ بهبود محسوس زمان تولید گزارش‌های سنگین.</li>
+        <li>طراحی و پیاده‌سازی بیش از <span class="ltr">200</span> تست واحد و یکپارچگی با <span class="ltr">xUnit / Moq</span>؛ افزایش پوشش تست و تضمین کیفیت انتشار.</li>
+        <li>پایش خطاهای محیط <span class="ltr">Production</span>، ریشه‌یابی و تحویل اصلاحات پایدار در چرخه‌های کوتاه انتشار.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">شرکت فناوری اطلاعات نیک‌پرداز</span>
+          <span class="pos">| برنامه‌نویس بک‌اند <span class="ltr">(.NET)</span></span>
+        </div>
+        <div class="date">فروردین ۱۴۰۳ تا بهمن ۱۴۰۳ · ۱۱ ماه</div>
+      </div>
+      <ul>
+        <li>توسعه‌ی سرتاسری قابلیت‌های جدید سامانه‌های سازمانی؛ از طراحی دیتابیس و منطق دامنه تا <span class="ltr">API</span>.</li>
+        <li>بازآرایی ماژول‌های قدیمی برای کاهش بدهی فنی و تسهیل توسعه‌ی قابلیت‌های بعدی.</li>
+        <li>تضمین کیفیت انتشار از مسیر تست، پایش خطاها و مستندسازی فنی ماژول‌های تحویل‌شده.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======== پروژه‌ها ======== -->
+  <section>
+    <h2>پروژه‌های شاخص</h2>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopMicroservices">EshopMicroservices</a></div>
+      <div class="body">فروشگاه اینترنتی با چهار سرویس مستقل (<span class="ltr">Catalog/Marten</span>، <span class="ltr">Basket/Redis</span>، <span class="ltr">Discount/gRPC</span>، <span class="ltr">Ordering/CQRS</span>)، ارتباط رویدادمحور با <span class="ltr">MassTransit</span> روی <span class="ltr">RabbitMQ</span> و دروازه‌ی واحد <span class="ltr">YARP</span>.
+        <div class="tech ltr">.NET · Microservices · YARP · RabbitMQ · Docker Compose</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopModularMonoliths">EshopModularMonoliths</a></div>
+      <div class="body">فروشگاه با معماری ماژولار: ماژول‌های مستقل با <span class="ltr">DbContext</span> و مهاجرت مجزا، ساختار <span class="ltr">Vertical Slice</span>، احراز هویت متمرکز با <span class="ltr">Keycloak (OIDC)</span> و لاگ ساختاریافته با <span class="ltr">Serilog / Seq</span>.
+        <div class="tech ltr">Modular Monolith · EF Core · Keycloak · Serilog</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/DigiLearn">DigiLearn</a></div>
+      <div class="body">پلتفرم آموزش آنلاین با ماژول‌های مستقل کسب‌وکار (<span class="ltr">Core, User, Blog, Ticket, Comment</span>)، تفکیک <span class="ltr">CQRS</span> با <span class="ltr">MediatR</span> و لایه‌ی <span class="ltr">Facade</span>، و <span class="ltr">EventBus</span> اختصاصی روی <span class="ltr">RabbitMQ</span>.
+        <div class="tech ltr">ASP.NET Core · CQRS · RabbitMQ · JWT · Razor Pages</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Book-Store">Book-Store</a></div>
+      <div class="body">بازارگاه چندفروشندگی با تفکیک لایه‌ها و <span class="ltr">CQRS</span>؛ کش توزیع‌شده‌ی <span class="ltr">Redis</span> با ابطال خودکار پس از تغییر داده و احراز هویت <span class="ltr">JWT</span>.
+        <div class="tech ltr">ASP.NET Core Web API · Redis · CQRS · SQL Server</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/WhiteLagoon.Web">WhiteLagoon.Web</a></div>
+      <div class="body">سامانه‌ی رزرو اقامتگاه با مدیریت نقش‌ها (<span class="ltr">Identity</span>)، پرداخت آنلاین <span class="ltr">Stripe</span> و تولید خودکار سند رزرو در قالب <span class="ltr">Word / PDF</span> با <span class="ltr">Syncfusion DocIO</span>.
+        <div class="tech ltr">ASP.NET Core MVC · Identity · Stripe · Syncfusion</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Parallel-Dotnet">Parallel-Dotnet</a></div>
+      <div class="body">مجموعه‌ی ۴۵ نمونه‌ی عملی هم‌روندی: هم‌گام‌سازی رشته‌ها (<span class="ltr">Lock, Interlocked, Mutex</span>)، کالکشن‌های <span class="ltr">Concurrent</span>، حلقه‌های موازی، <span class="ltr">PLINQ</span> و <span class="ltr">Async/Await</span>.
+        <div class="tech ltr">TPL · PLINQ · Concurrent Collections · Thread Safety</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Resume-Project">Resume-Project</a></div>
+      <div class="body">اپلیکیشن مدیریت رزومه با معماری سه‌لایه، الگوی <span class="ltr">Repository</span> در لایه‌ی داده و هش امن رمز عبور؛ رابط کاربری با <span class="ltr">jQuery / Ajax</span>.
+        <div class="tech ltr">ASP.NET MVC · 3-Layer · Repository Pattern</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======== تحصیلات و سایر ======== -->
+  <section>
+    <h2>تحصیلات</h2>
+    <div class="row">
+      <div class="k">کارشناسی ارشد</div>
+      <div class="v">مهندسی کامپیوتر — نرم‌افزار، دانشگاه آزاد اسلامی واحد خرم‌آباد <span class="meta">(۱۳۹۷ – ۱۳۹۹)</span></div>
+    </div>
+    <div class="row">
+      <div class="k">کارشناسی</div>
+      <div class="v">مهندسی کامپیوتر — نرم‌افزار، دانشگاه لرستان <span class="meta">(۱۳۹۳ – ۱۳۹۷)</span></div>
+    </div>
+  </section>
+
+  <!-- ======== دوره‌های آموزشی ======== -->
+  <section>
+    <h2>دوره‌های آموزشی</h2>
+    <div class="row">
+      <div class="k">دوره پیشرفته</div>
+      <div class="v"><span class="ltr">ASP.NET Core</span> — آکادمی کدیاک · ۹۶ ساعت <span class="meta">(۱۴۰۳)</span></div>
+    </div>
+    <div class="row">
+      <div class="k">دوره جامع</div>
+      <div class="v"><span class="ltr">ASP.NET Core</span> — نیک‌آموز · ۳۰ ساعت <span class="meta">(۱۴۰۴)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two-col">
+      <div>
+        <h2>زبان‌ها</h2>
+        <div class="row">
+          <div class="k">انگلیسی</div>
+          <div class="v">مطالعه و مستندات فنی در سطح خوب؛ مکاتبه‌ی نوشتاری و مکالمه در سطح متوسط.</div>
+        </div>
+      </div>
+      <div>
+        <h2>مهارت‌های نرم</h2>
+        <div class="row" style="border-top:1px dotted var(--line)">
+          <div class="v">کار تیمی و انتقال دانش، <span class="ltr">Code Review</span> سازنده، مستندسازی تصمیم‌های فنی، حل مسئله و یادگیری سریع فناوری‌های جدید.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>اطلاعات شخصی</h2>
+    <div class="meta">متولد ۱۳۷۴ · ساکن تهران · وضعیت نظام وظیفه: پایان خدمت</div>
+  </section>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">چاپ / ذخیره PDF</button>
+
+</body>
+</html>
