@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>شهریار شمسی صدر — رزومه</title>
+<title>شهریار شمسی صدر — رزومه | Shahriar Shamsi Sadr — Resume</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="screen">
@@ -46,7 +46,7 @@
   /* ---------- ردیف مهارت ---------- */
   .row{display:flex;gap:10px;padding:5px 0;border-bottom:1px dotted var(--line);}
   .row:last-child{border-bottom:none;}
-  .row .k{flex:0 0 120px;font-weight:700;font-size:10pt;}
+  .row .k{flex:0 0 160px;font-weight:700;font-size:10pt;}
   .row .v{flex:1;color:var(--soft);}
   .row .v b{color:var(--ink);font-weight:600;}
 
@@ -57,7 +57,7 @@
   .job-top .pos{font-size:10pt;color:var(--soft);font-weight:500;}
   .job-top .date{font-size:9.5pt;color:var(--muted);white-space:nowrap;}
   .job-sub{font-size:9.5pt;color:var(--muted);margin-bottom:4px;}
-  ul{margin:5px 15px 0 0;padding:0;}
+  ul{margin:5px 0 0;padding:0;margin-inline-start:15px;}
   li{margin-bottom:3px;text-align:justify;color:var(--soft);}
   li::marker{color:var(--accent);}
 
@@ -69,9 +69,23 @@
   .proj .name a:hover{color:#173a5a;text-decoration-thickness:2px;}
   .proj .body{color:var(--soft);margin-top:2px;}
   .proj .body .tech{color:var(--muted);font-size:9pt;margin-top:2px;}
+  .proj .pdate{font-weight:500;font-size:9.5pt;color:var(--muted);}
 
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;}
   .meta{font-size:9.5pt;color:var(--muted);}
+
+  /* ---------- دوزبانه ---------- */
+  .head-row{display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .lang-btn{
+    font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+    font-size:9.5pt;font-weight:700;cursor:pointer;
+    background:#fff;color:var(--accent);border:1.5px solid var(--accent);border-radius:6px;
+    padding:5px 14px;box-shadow:0 2px 8px rgba(15,23,42,.10);
+  }
+  .lang-btn:hover{background:var(--accent);color:#fff;}
+  .lang-en{display:none;}
+  body.en .lang-fa{display:none;}
+  body.en .lang-en{display:block;}
 
   /* ---------- چاپ ---------- */
   .print-btn{
@@ -108,21 +122,20 @@
     /* سلکتورها هم‌قدِ صفحه باشند تا سایز صفحه بر چاپ غلبه نکند */
     .summary,.v,.job-top .co,.job-top .pos,.proj .name{font-size:10.5pt;}
     .job-top .co{font-weight:700;}
-    .row .k{font-size:10.5pt;flex:0 0 34mm;}
+    .row .k{font-size:10.5pt;flex:0 0 42mm;}
     .job{margin-bottom:6px;}
-    .job-top .date,.job-sub,.meta,.proj .body .tech{font-size:9.5pt;}
+    .job-top .date,.job-sub,.meta,.proj .body .tech,.proj .pdate{font-size:9.5pt;}
     .proj{padding:3px 0;}
     .proj .name{font-weight:700;}
     .proj .name a{color:#1f4e79;text-decoration:underline;}
     .proj .body{margin-top:1px;}
-    ul{margin:2px 15px 0 0;}
+    ul{margin:2px 0;margin-inline-start:15px;}
     li{margin-bottom:1px;}
     .two-col{gap:0 20px;}
-    .ltr{font-family:Calibri,'Segoe UI',Tahoma,sans-serif;}
-    .summary,li,.proj .body{text-align:right;}
+    .summary,li,.proj .body{text-align:start;}
     .job,.proj,.row{break-inside:avoid;}
     .sheet{width:auto;min-height:0;box-shadow:none;padding:0;}
-    .print-btn{display:none;}
+    .print-btn,.lang-btn{display:none;}
   }
   @media (max-width:820px){
     .sheet{width:auto;padding:18px 16px;min-height:0;}
@@ -133,16 +146,20 @@
 </head>
 <body>
 
-<div class="sheet">
+<div class="sheet lang-fa" dir="rtl">
 
   <!-- ======== سربرگ ======== -->
   <header>
-    <h1>شهریار شمسی صدر</h1>
+    <div class="head-row">
+      <h1>شهریار شمسی صدر</h1>
+      <button class="lang-btn" onclick="toggleLang()" title="تغییر زبان / Switch language">EN</button>
+    </div>
     <div class="role">توسعه‌دهنده بک‌اند <span class="ltr">.NET</span></div>
     <div class="contact">
       <span>تهران</span>
       <span class="ltr">+98 921 690 3628</span>
       <a class="ltr" href="mailto:shamsisadr01@gmail.com">shamsisadr01@gmail.com</a>
+      <a class="ltr" href="https://github.com/shamsisadr01">github.com/shamsisadr01</a>
     </div>
   </header>
 
@@ -150,10 +167,11 @@
   <section>
     <h2>خلاصه‌ی حرفه‌ای</h2>
     <p class="summary">
-      توسعه‌دهنده بک‌اند با سه سال تجربه‌ی ساخت سامانه‌های سازمانی در سه شرکت فناوری.
+      توسعه‌دهنده بک‌اند با سه سال تجربه‌ی ساخت سامانه‌های سازمانی در سه شرکت فناوری و پرتفوی متن‌باز فعال با بیش از ۳۰ مخزن در گیت‌هاب.
       تخصص اصلی‌ام طراحی سرویس‌های مقیاس‌پذیر با <span class="ltr">ASP.NET Core</span> و <span class="ltr">SQL Server</span> بر پایه‌ی معماری تمیز،
       <span class="ltr">DDD</span> و <span class="ltr">CQRS</span> است. در این مسیر، مونولیت‌های پیچیده را به ماژول‌های مستقل شکسته‌ام،
-      زمان پاسخ کوئری‌های پرترافیک را کوتاه کرده‌ام و فرهنگ تست خودکار (واحد، یکپارچگی، پذیرش) و <span class="ltr">Code Review</span> را در تیم تثبیت کرده‌ام.
+      زمان پاسخ کوئری‌های پرترافیک را کوتاه کرده‌ام، بیش از <span class="ltr">200</span> تست واحد و یکپارچگی پیاده کرده‌ام و
+      فرهنگ تست خودکار و <span class="ltr">Code Review</span> را در تیم تثبیت کرده‌ام.
     </p>
   </section>
 
@@ -196,11 +214,13 @@
         <div class="date">دی ۱۴۰۴ تاکنون · ۹ ماه</div>
       </div>
       <ul>
-        <li>مالکیت سرتاسری سرویس‌های بک‌اند؛ از مدل‌سازی داده و لایه‌ی دسترسی (<span class="ltr">EF Core / SQL Server</span>) تا طراحی <span class="ltr">API</span> و انتشار.</li>
-        <li>تحلیل نیازمندی‌های کسب‌وکار، ارائه‌ی راهکار فنی و پیاده‌سازی با <span class="ltr">ASP.NET Core</span> بر پایه‌ی اصول <span class="ltr">SOLID</span>.</li>
-        <li>بهینه‌سازی کوئری‌های کند و الگوهای دسترسی به داده؛ کاهش زمان پاسخ <span class="ltr">endpoint</span>های پرترافیک.</li>
-        <li>طراحی و پیاده‌سازی فرایندهای کسب‌وکار با موتور ورک‌فلو <span class="ltr">Camunda</span> و یکپارچه‌سازی آن با سرویس‌های بک‌اند.</li>
-        <li>راهبری <span class="ltr">Code Review</span>، تعریف استاندارد کدنویسی و هدایت تیم در پیاده‌سازی الگوهای طراحی.</li>
+        <li>مالکیت فنی سرتاسری سرویس‌های بک‌اند؛ از تحلیل نیازمندی‌های کسب‌وکار و مدل‌سازی داده (<span class="ltr">EF Core / SQL Server</span>) تا طراحی <span class="ltr">API</span> و انتشار در محیط <span class="ltr">Production</span>.</li>
+        <li>طراحی و پیاده‌سازی راهکارهای فنی با <span class="ltr">ASP.NET Core</span> بر پایه‌ی اصول <span class="ltr">SOLID</span> و الگوهای طراحی؛ با تمرکز بر نگه‌داشت‌پذیری و توسعه‌پذیری سامانه.</li>
+        <li>طراحی و توسعه‌ی <span class="ltr">API</span> برای یکپارچگی سرویس‌های داخلی و مستندسازی آن با <span class="ltr">Swagger / OpenAPI</span>.</li>
+        <li>مدیریت مهاجرت‌های اسکیمای دیتابیس با <span class="ltr">EF Core</span> هم‌گام با تحولات سرویس‌ها.</li>
+        <li>بهینه‌سازی عملکرد کوئری‌ها و الگوهای دسترسی به داده؛ کاهش زمان پاسخ <span class="ltr">endpoint</span>های پرترافیک و بهبود تجربه‌ی کاربر نهایی.</li>
+        <li>طراحی و خودکارسازی فرایندهای کسب‌وکار با موتور ورک‌فلو <span class="ltr">Camunda (BPMN)</span> و یکپارچه‌سازی آن با سرویس‌های بک‌اند.</li>
+        <li>راهبری فرایند <span class="ltr">Code Review</span>، تدوین استانداردهای کدنویسی و هدایت اعضای تیم در پیاده‌سازی الگوهای طراحی.</li>
       </ul>
     </div>
 
@@ -213,10 +233,10 @@
         <div class="date">اسفند ۱۴۰۳ تا آذر ۱۴۰۴ · ۱۰ ماه</div>
       </div>
       <ul>
-        <li>طراحی و توسعه‌ی ماژول‌های کلیدی با معماری چندلایه و الگوهای <span class="ltr">Repository</span> و <span class="ltr">Unit of Work</span>.</li>
-        <li>بازطراحی ساختار داده و رفع گلوگاه‌های کارایی (<span class="ltr">Indexing</span>، حذف مسئله‌ی <span class="ltr">N+1</span>)؛ بهبود محسوس زمان تولید گزارش‌های سنگین.</li>
-        <li>طراحی و پیاده‌سازی بیش از <span class="ltr">200</span> تست واحد و یکپارچگی با <span class="ltr">xUnit / Moq</span>؛ افزایش پوشش تست و تضمین کیفیت انتشار.</li>
-        <li>پایش خطاهای محیط <span class="ltr">Production</span>، ریشه‌یابی و تحویل اصلاحات پایدار در چرخه‌های کوتاه انتشار.</li>
+        <li>طراحی و توسعه‌ی ماژول‌های کلیدی سامانه با معماری چندلایه و الگوهای <span class="ltr">Repository</span> و <span class="ltr">Unit of Work</span>؛ تحویل مستمر قابلیت‌های جدید کسب‌وکار.</li>
+        <li>شناسایی و رفع گلوگاه‌های کارایی در سطح داده (<span class="ltr">Indexing</span>، حذف الگوی <span class="ltr">N+1</span>، بهینه‌سازی کوئری‌های <span class="ltr">T-SQL</span>)؛ بهبود محسوس زمان تولید گزارش‌های سنگین.</li>
+        <li>طراحی و پیاده‌سازی بیش از <span class="ltr">200</span> تست واحد و یکپارچگی با <span class="ltr">xUnit / Moq</span>؛ ارتقای پوشش تست و پایداری انتشارها.</li>
+        <li>پایش خطاهای محیط <span class="ltr">Production</span>، ریشه‌یابی مشکلات و تحویل اصلاحات پایدار در چرخه‌های کوتاه انتشار.</li>
       </ul>
     </div>
 
@@ -229,8 +249,8 @@
         <div class="date">فروردین ۱۴۰۳ تا بهمن ۱۴۰۳ · ۱۱ ماه</div>
       </div>
       <ul>
-        <li>توسعه‌ی سرتاسری قابلیت‌های جدید سامانه‌های سازمانی؛ از طراحی دیتابیس و منطق دامنه تا <span class="ltr">API</span>.</li>
-        <li>بازآرایی ماژول‌های قدیمی برای کاهش بدهی فنی و تسهیل توسعه‌ی قابلیت‌های بعدی.</li>
+        <li>طراحی و توسعه‌ی سرتاسری قابلیت‌های جدید سامانه‌های سازمانی؛ از مدل‌سازی دیتابیس و منطق دامنه تا طراحی <span class="ltr">API</span>.</li>
+        <li>بازآرایی ماژول‌های قدیمی با هدف کاهش بدهی فنی و افزایش سرعت توسعه‌ی قابلیت‌های بعدی.</li>
         <li>تضمین کیفیت انتشار از مسیر تست، پایش خطاها و مستندسازی فنی ماژول‌های تحویل‌شده.</li>
       </ul>
     </div>
@@ -241,54 +261,48 @@
     <h2>پروژه‌های شاخص</h2>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopMicroservices">EshopMicroservices</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopMicroservices">EshopMicroservices</a><span class="pdate"> · ۱۴۰۵</span></div>
       <div class="body">فروشگاه اینترنتی با چهار سرویس مستقل (<span class="ltr">Catalog/Marten</span>، <span class="ltr">Basket/Redis</span>، <span class="ltr">Discount/gRPC</span>، <span class="ltr">Ordering/CQRS</span>)، ارتباط رویدادمحور با <span class="ltr">MassTransit</span> روی <span class="ltr">RabbitMQ</span> و دروازه‌ی واحد <span class="ltr">YARP</span>.
         <div class="tech ltr">.NET · Microservices · YARP · RabbitMQ · Docker Compose</div>
       </div>
     </div>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopModularMonoliths">EshopModularMonoliths</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/EshopModularMonoliths">EshopModularMonoliths</a><span class="pdate"> · ۱۴۰۴</span></div>
       <div class="body">فروشگاه با معماری ماژولار: ماژول‌های مستقل با <span class="ltr">DbContext</span> و مهاجرت مجزا، ساختار <span class="ltr">Vertical Slice</span>، احراز هویت متمرکز با <span class="ltr">Keycloak (OIDC)</span> و لاگ ساختاریافته با <span class="ltr">Serilog / Seq</span>.
         <div class="tech ltr">Modular Monolith · EF Core · Keycloak · Serilog</div>
       </div>
     </div>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/DigiLearn">DigiLearn</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/DigiLearn">DigiLearn</a><span class="pdate"> · ۱۴۰۳</span></div>
       <div class="body">پلتفرم آموزش آنلاین با ماژول‌های مستقل کسب‌وکار (<span class="ltr">Core, User, Blog, Ticket, Comment</span>)، تفکیک <span class="ltr">CQRS</span> با <span class="ltr">MediatR</span> و لایه‌ی <span class="ltr">Facade</span>، و <span class="ltr">EventBus</span> اختصاصی روی <span class="ltr">RabbitMQ</span>.
         <div class="tech ltr">ASP.NET Core · CQRS · RabbitMQ · JWT · Razor Pages</div>
       </div>
     </div>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/Book-Store">Book-Store</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Book-Store">Book-Store</a><span class="pdate"> · ۱۴۰۳</span></div>
       <div class="body">بازارگاه چندفروشندگی با تفکیک لایه‌ها و <span class="ltr">CQRS</span>؛ کش توزیع‌شده‌ی <span class="ltr">Redis</span> با ابطال خودکار پس از تغییر داده و احراز هویت <span class="ltr">JWT</span>.
         <div class="tech ltr">ASP.NET Core Web API · Redis · CQRS · SQL Server</div>
       </div>
     </div>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/WhiteLagoon.Web">WhiteLagoon.Web</a></div>
-      <div class="body">سامانه‌ی رزرو اقامتگاه با مدیریت نقش‌ها (<span class="ltr">Identity</span>)، پرداخت آنلاین <span class="ltr">Stripe</span> و تولید خودکار سند رزرو در قالب <span class="ltr">Word / PDF</span> با <span class="ltr">Syncfusion DocIO</span>.
-        <div class="tech ltr">ASP.NET Core MVC · Identity · Stripe · Syncfusion</div>
-      </div>
-    </div>
-
-    <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/Parallel-Dotnet">Parallel-Dotnet</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Parallel-Dotnet">Parallel-Dotnet</a><span class="pdate"> · ۱۴۰۵</span></div>
       <div class="body">مجموعه‌ی ۴۵ نمونه‌ی عملی هم‌روندی: هم‌گام‌سازی رشته‌ها (<span class="ltr">Lock, Interlocked, Mutex</span>)، کالکشن‌های <span class="ltr">Concurrent</span>، حلقه‌های موازی، <span class="ltr">PLINQ</span> و <span class="ltr">Async/Await</span>.
         <div class="tech ltr">TPL · PLINQ · Concurrent Collections · Thread Safety</div>
       </div>
     </div>
 
     <div class="proj">
-      <div class="name ltr"><a href="https://github.com/shamsisadr01/Resume-Project">Resume-Project</a></div>
+      <div class="name ltr"><a href="https://github.com/shamsisadr01/Resume-Project">Resume-Project</a><span class="pdate"> · ۱۴۰۴</span></div>
       <div class="body">اپلیکیشن مدیریت رزومه با معماری سه‌لایه، الگوی <span class="ltr">Repository</span> در لایه‌ی داده و هش امن رمز عبور؛ رابط کاربری با <span class="ltr">jQuery / Ajax</span>.
         <div class="tech ltr">ASP.NET MVC · 3-Layer · Repository Pattern</div>
       </div>
     </div>
 
+    <div class="meta" style="margin-top:8px">مجموعه‌ی کامل پروژه‌ها و نمونه‌کدها: <a class="ltr" href="https://github.com/shamsisadr01" style="color:var(--accent);font-weight:600">github.com/shamsisadr01</a></div>
   </section>
 
   <!-- ======== تحصیلات و سایر ======== -->
@@ -342,7 +356,237 @@
 
 </div>
 
-<button class="print-btn" onclick="window.print()">چاپ / ذخیره PDF</button>
+<!-- ======== English version ======== -->
+<div class="sheet lang-en" dir="ltr">
+
+  <!-- ======== Header ======== -->
+  <header>
+    <div class="head-row">
+      <h1>Shahriar Shamsi Sadr</h1>
+      <button class="lang-btn" onclick="toggleLang()" title="تغییر زبان / Switch language">EN</button>
+    </div>
+    <div class="role">Backend Developer (.NET)</div>
+    <div class="contact">
+      <span>Tehran, Iran</span>
+      <span>+98 921 690 3628</span>
+      <a href="mailto:shamsisadr01@gmail.com">shamsisadr01@gmail.com</a>
+      <a href="https://github.com/shamsisadr01">github.com/shamsisadr01</a>
+    </div>
+  </header>
+
+  <!-- ======== Summary ======== -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Backend developer with three years of experience building enterprise systems across three technology companies,
+      plus an active open-source portfolio of 30+ public repositories on GitHub. I specialize in designing scalable
+      services with ASP.NET Core and SQL Server on Clean Architecture, DDD, and CQRS principles —
+      from domain and database design to APIs, deployment, and production monitoring. Along the way I have broken
+      complex monoliths into independent modules, cut the response time of high-traffic queries, implemented
+      200+ unit and integration tests, and helped establish automated-testing and code-review culture within my teams.
+    </p>
+  </section>
+
+  <!-- ======== Skills ======== -->
+  <section>
+    <h2>Technical Skills</h2>
+
+    <div class="row">
+      <div class="k">Languages &amp; Frameworks</div>
+      <div class="v">C#, .NET 8 / 9 / 10, ASP.NET Core (MVC, Minimal API), EF Core, LINQ, gRPC, JavaScript, HTML, CSS, Familiar with Angular &amp; React</div>
+    </div>
+    <div class="row">
+      <div class="k">Data &amp; Caching</div>
+      <div class="v">SQL Server / T-SQL, PostgreSQL, MongoDB, Marten, SQLite, Redis</div>
+    </div>
+    <div class="row">
+      <div class="k">Architecture &amp; Design</div>
+      <div class="v">Clean Architecture, SOLID, DDD, CQRS / MediatR, Vertical Slice, Modular Monolith, Microservices, GoF Patterns</div>
+    </div>
+    <div class="row">
+      <div class="k">Testing &amp; Quality</div>
+      <div class="v">xUnit, Moq, Shouldly, Respawn, FluentValidation, Swagger / OpenAPI, Scalar</div>
+    </div>
+    <div class="row">
+      <div class="k">Tools &amp; Infrastructure</div>
+      <div class="v">Git / GitHub / GitLab, Docker, .NET Aspire, YARP / Ocelot (API Gateway), RabbitMQ / MassTransit, Serilog &amp; Seq, Keycloak (OIDC), Camunda Workflow, Jira</div>
+    </div>
+  </section>
+
+  <!-- ======== Experience ======== -->
+  <section>
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">Motamayez</span>
+          <span class="pos">| Backend Developer (.NET)</span>
+        </div>
+        <div class="date">Dec 2025 – Present · 9 mo</div>
+      </div>
+      <ul>
+        <li>End-to-end ownership of backend services — from business analysis and data modeling (EF Core / SQL Server) to API design and production deployment.</li>
+        <li>Designed and implemented technical solutions with ASP.NET Core based on SOLID principles and design patterns, with a focus on maintainability and extensibility.</li>
+        <li>Designed and developed APIs for internal service integration, documented with Swagger / OpenAPI.</li>
+        <li>Managed EF Core database schema migrations in step with the evolution of services.</li>
+        <li>Optimized query performance and data-access patterns; reduced response times of high-traffic endpoints and improved the end-user experience.</li>
+        <li>Designed and automated business processes with the Camunda (BPMN) workflow engine and integrated them with backend services.</li>
+        <li>Led the code review process, defined coding standards, and guided team members in applying design patterns.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">Karno</span>
+          <span class="pos">| Backend Developer (.NET)</span>
+        </div>
+        <div class="date">Feb 2025 – Dec 2025 · 10 mo</div>
+      </div>
+      <ul>
+        <li>Designed and developed core system modules on a layered architecture using Repository and Unit of Work patterns, continuously delivering new business capabilities.</li>
+        <li>Identified and resolved data-layer performance bottlenecks (indexing, eliminating N+1 queries, T-SQL optimization); noticeably improved heavy report generation times.</li>
+        <li>Designed and implemented 200+ unit and integration tests with xUnit / Moq; raised test coverage and release stability.</li>
+        <li>Monitored production errors, performed root-cause analysis, and delivered stable fixes within short release cycles.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div>
+          <span class="co">Nikpardaz IT Co.</span>
+          <span class="pos">| Backend Developer (.NET)</span>
+        </div>
+        <div class="date">Mar 2024 – Feb 2025 · 11 mo</div>
+      </div>
+      <ul>
+        <li>Designed and developed end-to-end features for enterprise systems — from database modeling and domain logic to API design.</li>
+        <li>Refactored legacy modules to reduce technical debt and speed up future feature development.</li>
+        <li>Ensured release quality through testing, error monitoring, and technical documentation of delivered modules.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======== Projects ======== -->
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/EshopMicroservices">EshopMicroservices</a> <span class="pdate">· 2026</span></div>
+      <div class="body">Online store built from four independent services (Catalog/Marten, Basket/Redis, Discount/gRPC, Ordering/CQRS), event-driven communication with MassTransit on RabbitMQ, and a unified YARP gateway.
+        <div class="tech">.NET · Microservices · YARP · RabbitMQ · Docker Compose</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/EshopModularMonoliths">EshopModularMonoliths</a> <span class="pdate">· 2026</span></div>
+      <div class="body">E-commerce platform with a modular monolith architecture: independent modules with separate DbContexts and migrations, Vertical Slice structure, centralized authentication via Keycloak (OIDC), and structured logging with Serilog / Seq.
+        <div class="tech">Modular Monolith · EF Core · Keycloak · Serilog</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/DigiLearn">DigiLearn</a> <span class="pdate">· 2024</span></div>
+      <div class="body">Online learning platform with independent business modules (Core, User, Blog, Ticket, Comment), CQRS separation with MediatR and a Facade layer, and a custom EventBus on RabbitMQ.
+        <div class="tech">ASP.NET Core · CQRS · RabbitMQ · JWT · Razor Pages</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/Book-Store">Book-Store</a> <span class="pdate">· 2024</span></div>
+      <div class="body">Multi-vendor marketplace with clean layer separation and CQRS; distributed Redis cache with automatic invalidation on data change, and JWT authentication.
+        <div class="tech">ASP.NET Core Web API · Redis · CQRS · SQL Server</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/Parallel-Dotnet">Parallel-Dotnet</a> <span class="pdate">· 2026</span></div>
+      <div class="body">A collection of 45 hands-on concurrency samples: thread synchronization (Lock, Interlocked, Mutex), concurrent collections, parallel loops, PLINQ, and async/await.
+        <div class="tech">TPL · PLINQ · Concurrent Collections · Thread Safety</div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="name"><a href="https://github.com/shamsisadr01/Resume-Project">Resume-Project</a> <span class="pdate">· 2025</span></div>
+      <div class="body">Resume-management application with a three-layer architecture, Repository pattern in the data layer, and secure password hashing; jQuery / Ajax UI.
+        <div class="tech">ASP.NET MVC · 3-Layer · Repository Pattern</div>
+      </div>
+    </div>
+
+    <div class="meta" style="margin-top:8px">Full portfolio and code samples: <a href="https://github.com/shamsisadr01" style="color:var(--accent);font-weight:600">github.com/shamsisadr01</a></div>
+  </section>
+
+  <!-- ======== Education ======== -->
+  <section>
+    <h2>Education</h2>
+    <div class="row">
+      <div class="k">M.Sc.</div>
+      <div class="v">Computer Engineering — Software, Islamic Azad University, Khorramabad <span class="meta">(2018 – 2020)</span></div>
+    </div>
+    <div class="row">
+      <div class="k">B.Sc.</div>
+      <div class="v">Computer Engineering — Software, Lorestan University <span class="meta">(2014 – 2018)</span></div>
+    </div>
+  </section>
+
+  <!-- ======== Courses ======== -->
+  <section>
+    <h2>Courses &amp; Training</h2>
+    <div class="row">
+      <div class="k">Advanced</div>
+      <div class="v">ASP.NET Core — Kodiacad Academy · 96 hours <span class="meta">(2024)</span></div>
+    </div>
+    <div class="row">
+      <div class="k">Comprehensive</div>
+      <div class="v">ASP.NET Core — NikAmooz · 30 hours <span class="meta">(2025)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two-col">
+      <div>
+        <h2>Languages</h2>
+        <div class="row">
+          <div class="k">English</div>
+          <div class="v">Strong technical reading and documentation skills; intermediate written correspondence and conversation.</div>
+        </div>
+        <div class="row">
+          <div class="k">Persian</div>
+          <div class="v">Native.</div>
+        </div>
+      </div>
+      <div>
+        <h2>Soft Skills</h2>
+        <div class="row" style="border-top:1px dotted var(--line)">
+          <div class="v">Teamwork and knowledge sharing, constructive code reviews, documenting technical decisions, problem solving, and fast learning of new technologies.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<button class="print-btn" onclick="window.print()" data-fa="چاپ / ذخیره PDF" data-en="Print / Save as PDF">چاپ / ذخیره PDF</button>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.lang-btn');
+  var pb=document.querySelector('.print-btn');
+  function apply(en){
+    document.body.classList.toggle('en',en);
+    document.documentElement.lang=en?'en':'fa';
+    document.documentElement.dir=en?'ltr':'rtl';
+    btns.forEach(function(b){b.textContent=en?'فا':'EN';});
+    if(pb)pb.textContent=en?pb.getAttribute('data-en'):pb.getAttribute('data-fa');
+    document.title=en?'Shahriar Shamsi Sadr — Resume':'شهریار شمسی صدر — رزومه';
+    try{localStorage.setItem('resume-lang',en?'en':'fa');}catch(e){}
+  }
+  window.toggleLang=function(){apply(!document.body.classList.contains('en'));};
+  var saved=null;try{saved=localStorage.getItem('resume-lang');}catch(e){}
+  apply(saved==='en');
+})();
+</script>
 
 </body>
 </html>
